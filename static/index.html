@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice Data Analysis</title>
+<style>
+  :root { --bg:#0f172a; --card:#1e293b; --bd:#334155; --tx:#e2e8f0; --mut:#94a3b8; --ac:#38bdf8; --ok:#4ade80; --err:#f87171; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, "Segoe UI", Tahoma, sans-serif; background:var(--bg); color:var(--tx); }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; } .sub { color: var(--mut); margin-bottom: 20px; }
+  .card { background: var(--card); border:1px solid var(--bd); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+  .card h2 { font-size: 1rem; margin: 0 0 12px; color: var(--ac); }
+  button { background: var(--ac); color:#04202e; border:0; border-radius: 8px; padding: 10px 16px; font-weight:600; cursor:pointer; }
+  button.rec { background: var(--err); color:#fff; } button:disabled { opacity:.5; cursor:not-allowed; }
+  input[type=text] { width:100%; padding:10px; border-radius:8px; border:1px solid var(--bd); background:#0b1220; color:var(--tx); }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .mut { color: var(--mut); font-size:.9rem; } .err { color: var(--err); } .ok { color: var(--ok); }
+  pre { background:#0b1220; border:1px solid var(--bd); padding:12px; border-radius:8px; overflow:auto; direction:ltr; text-align:left; margin:8px 0; }
+  .tablewrap { overflow:auto; max-height: 420px; border:1px solid var(--bd); border-radius:8px; }
+  table { border-collapse: collapse; width:100%; } th, td { padding:6px 10px; border-bottom:1px solid var(--bd); white-space:nowrap; }
+  th { position:sticky; top:0; background:#0b1220; text-align:start; }
+  .rtl { direction: rtl; text-align: right; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🎙️ Voice-Based Data Analysis</h1>
+  <div class="sub">Voice → Faster-Whisper → LLM → SQL → SQLite3 → result · العربية والإنجليزية</div>
+
+  <div class="card">
+    <h2>1. Upload dataset</h2>
+    <div class="row">
+      <input type="file" id="file" accept=".csv,.tsv,.txt,.xlsx,.xls,.json">
+      <button id="upBtn">Upload</button>
+    </div>
+    <div id="upMsg" class="mut" style="margin-top:8px"></div>
+  </div>
+
+  <div class="card">
+    <h2>2. Ask by voice or text</h2>
+    <div class="row">
+      <button id="recBtn" disabled>🎤 Start recording</button>
+      <select id="lang" style="padding:9px;border-radius:8px">
+        <option value="">Auto language</option><option value="ar">العربية</option><option value="en">English</option>
+      </select>
+      <span id="recMsg" class="mut"></span>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <input type="text" id="q" placeholder="… or type: اعرض إجمالي المبيعات لكل فئة / Show total sales by category" style="flex:1" disabled>
+      <button id="askBtn" disabled>Ask</button>
+    </div>
+  </div>
+
+  <div class="card" id="out" style="display:none">
+    <h2>3. Result</h2>
+    <div id="transcript" class="mut"></div>
+    <pre id="sql"></pre>
+    <div id="expl" style="margin:8px 0"></div>
+    <div class="tablewrap"><table id="tbl"></table></div>
+    <div id="meta" class="mut" style="margin-top:6px"></div>
+  </div>
+  <div id="error" class="err"></div>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+let datasetId = null, recorder = null, chunks = [];
+const isAr = s => (s.match(/[؀-ۿ]/g) || []).length > (s.match(/[A-Za-z]/g) || []).length;
+
+async function api(url, opts) {
+  const r = await fetch(url, opts);
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) { const e = new Error(j.detail || r.statusText); e.data = j; throw e; }
+  return j;
+}
+function showErr(e) { $("error").textContent = "⚠️ " + e.message; if (e.data && e.data.sql) { $("out").style.display = "block"; $("sql").textContent = e.data.sql; } }
+
+$("upBtn").onclick = async () => {
+  $("error").textContent = "";
+  const f = $("file").files[0]; if (!f) return;
+  const fd = new FormData(); fd.append("file", f);
+  $("upMsg").textContent = "Uploading…";
+  try {
+    const d = await api("/datasets/upload", { method: "POST", body: fd });
+    datasetId = d.dataset_id;
+    $("upMsg").innerHTML = `<span class="ok">✔ ${d.filename}</span> — ${d.row_count} rows · columns: ${d.columns.map(c => c.name).join(", ")}`;
+    ["recBtn", "q", "askBtn"].forEach(i => $(i).disabled = false);
+  } catch (e) { $("upMsg").textContent = ""; showErr(e); }
+};
+
+function render(d) {
+  $("out").style.display = "block"; $("error").textContent = "";
+  $("transcript").textContent = d.transcript ? `🗣️ (${d.language}) ${d.transcript}` : `❓ ${d.question}`;
+  $("sql").textContent = d.sql;
+  $("expl").textContent = d.explanation || "";
+  $("expl").className = d.explanation && isAr(d.explanation) ? "rtl" : "";
+  const t = $("tbl"); t.innerHTML = "";
+  const th = document.createElement("tr"); d.columns.forEach(c => { const e = document.createElement("th"); e.textContent = c; th.appendChild(e); });
+  t.appendChild(th);
+  d.rows.forEach(r => { const tr = document.createElement("tr"); r.forEach(v => { const td = document.createElement("td"); td.textContent = v === null ? "NULL" : v; tr.appendChild(td); }); t.appendChild(tr); });
+  $("meta").textContent = `${d.row_count} rows${d.truncated ? " (truncated)" : ""} · ${d.elapsed_ms} ms · SQL retries: ${d.sql_retries}`;
+}
+
+$("askBtn").onclick = async () => {
+  const q = $("q").value.trim(); if (!q) return;
+  $("askBtn").disabled = true; $("error").textContent = "";
+  try { render(await api("/text-query", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ dataset_id: datasetId, question: q }) })); }
+  catch (e) { showErr(e); } finally { $("askBtn").disabled = false; }
+};
+$("q").addEventListener("keydown", e => { if (e.key === "Enter") $("askBtn").click(); });
+
+$("recBtn").onclick = async () => {
+  if (recorder && recorder.state === "recording") { recorder.stop(); return; }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    recorder = new MediaRecorder(stream); chunks = [];
+    recorder.ondataavailable = e => chunks.push(e.data);
+    recorder.onstop = async () => {
+      stream.getTracks().forEach(t => t.stop());
+      $("recBtn").textContent = "🎤 Start recording"; $("recBtn").classList.remove("rec"); $("recMsg").textContent = "Processing…";
+      const fd = new FormData();
+      fd.append("audio", new Blob(chunks, { type: recorder.mimeType }), "speech.webm");
+      fd.append("dataset_id", datasetId); fd.append("language", $("lang").value);
+      try { render(await api("/voice-query", { method: "POST", body: fd })); } catch (e) { showErr(e); }
+      $("recMsg").textContent = "";
+    };
+    recorder.start(); $("recBtn").textContent = "⏹ Stop & send"; $("recBtn").classList.add("rec"); $("recMsg").textContent = "Recording…";
+  } catch (e) { showErr(new Error("Microphone access denied or unavailable.")); }
+};
+</script>
+</body>
+</html>

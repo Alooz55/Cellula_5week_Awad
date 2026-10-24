@@ -1,0 +1,401 @@
+order_id,order_date,category,city,quantity,amount
+1,2025-02-08,Home & Kitchen,Amman,2,71.29
+2,2024-02-29,Electronics,Irbid,3,389.99
+3,2024-03-12,Books,Irbid,4,39.96
+4,2024-05-06,Books,Irbid,1,39.68
+5,2025-02-10,Electronics,Amman,5,4405.02
+6,2024-05-16,Electronics,Zarqa,5,2176.56
+7,2024-11-11,Electronics,Irbid,5,912.22
+8,2024-04-09,Clothing,Amman,3,364.76
+9,2025-03-13,Clothing,Zarqa,4,415.23
+10,2024-11-02,Books,Irbid,3,146.07
+11,2024-11-03,Clothing,Aqaba,1,177.52
+12,2024-03-15,Books,Amman,3,99.47
+13,2024-06-04,Clothing,Aqaba,3,287.72
+14,2024-11-17,Electronics,Zarqa,5,3281.18
+15,2025-04-12,Books,Amman,5,255.99
+16,2024-03-07,Home & Kitchen,Amman,4,893.52
+17,2025-04-01,Home & Kitchen,Zarqa,5,1096.19
+18,2025-04-17,Home & Kitchen,Zarqa,1,62.89
+19,2024-03-01,Electronics,Irbid,4,2858.35
+20,2025-02-11,Clothing,Aqaba,2,370.05
+21,2024-06-19,Books,Aqaba,1,27.09
+22,2025-03-16,Home & Kitchen,Zarqa,2,432.65
+23,2024-08-24,Home & Kitchen,Irbid,4,154.6
+24,2024-08-26,Clothing,Amman,2,214.59
+25,2024-10-15,Clothing,Amman,3,138.67
+26,2024-11-22,Home & Kitchen,Irbid,5,1058.95
+27,2025-02-05,Electronics,Aqaba,4,1676.73
+28,2025-02-14,Electronics,Amman,4,1009.95
+29,2024-06-15,Clothing,Amman,4,324.84
+30,2024-01-01,Electronics,Irbid,1,529.29
+31,2024-01-27,Home & Kitchen,Amman,5,1320.92
+32,2024-09-15,Books,Zarqa,2,76.25
+33,2024-04-28,Books,Aqaba,1,59.62
+34,2025-05-10,Books,Zarqa,4,38.89
+35,2024-09-28,Electronics,Aqaba,3,2289.25
+36,2024-01-24,Clothing,Irbid,5,955.89
+37,2024-01-28,Home & Kitchen,Zarqa,2,587.75
+38,2025-06-14,Electronics,Zarqa,3,2479.82
+39,2025-05-29,Home & Kitchen,Zarqa,2,392.77
+40,2025-02-14,Clothing,Irbid,2,111.97
+41,2024-01-30,Books,Amman,3,145.37
+42,2024-07-17,Books,Zarqa,3,88.79
+43,2024-03-23,Home & Kitchen,Irbid,3,132.34
+44,2024-12-11,Books,Irbid,2,63.09
+45,2024-12-18,Electronics,Amman,4,3070.88
+46,2024-07-23,Electronics,Aqaba,4,3244.84
+47,2024-03-29,Books,Aqaba,3,91.42
+48,2024-06-23,Electronics,Irbid,2,244.08
+49,2025-04-30,Books,Zarqa,2,27.15
+50,2024-01-15,Clothing,Amman,1,114.78
+51,2024-07-18,Clothing,Irbid,4,100.16
+52,2025-05-28,Clothing,Irbid,3,472.39
+53,2025-03-05,Home & Kitchen,Irbid,3,97.07
+54,2025-06-13,Home & Kitchen,Aqaba,4,1002.94
+55,2024-06-04,Clothing,Amman,5,885.53
+56,2024-01-05,Clothing,Irbid,5,255.11
+57,2024-05-03,Books,Amman,5,114.65
+58,2024-02-28,Books,Irbid,1,15.52
+59,2025-06-03,Electronics,Aqaba,1,549.38
+60,2024-11-29,Electronics,Irbid,4,2616.74
+61,2025-05-04,Books,Irbid,5,217.28
+62,2024-07-26,Home & Kitchen,Aqaba,5,270.42
+63,2025-03-28,Electronics,Zarqa,4,632.15
+64,2024-03-15,Clothing,Irbid,4,562.02
+65,2025-01-09,Electronics,Irbid,2,604.97
+66,2024-08-12,Clothing,Amman,4,366.74
+67,2024-08-17,Books,Irbid,2,87.7
+68,2025-03-07,Books,Irbid,3,73.84
+69,2024-01-20,Electronics,Zarqa,3,1629.72
+70,2025-01-28,Books,Zarqa,1,33.46
+71,2024-03-06,Home & Kitchen,Amman,5,1478.74
+72,2024-03-27,Clothing,Zarqa,1,68.95
+73,2024-05-12,Clothing,Aqaba,3,518.78
+74,2024-06-01,Home & Kitchen,Aqaba,4,858.48
+75,2024-02-28,Electronics,Irbid,3,1320.76
+76,2024-01-18,Electronics,Amman,3,2223.91
+77,2024-08-15,Electronics,Amman,5,1557.8
+78,2024-01-12,Electronics,Zarqa,4,3581.78
+79,2024-05-12,Books,Amman,3,101.94
+80,2024-06-14,Clothing,Zarqa,1,29.07
+81,2024-11-08,Clothing,Irbid,3,216.58
+82,2024-12-21,Clothing,Amman,3,597.03
+83,2024-01-19,Electronics,Irbid,1,511.39
+84,2024-04-18,Clothing,Aqaba,4,552.69
+85,2024-11-11,Books,Irbid,5,295.17
+86,2024-05-23,Home & Kitchen,Aqaba,2,593.98
+87,2024-01-15,Electronics,Amman,2,1200.72
+88,2024-06-16,Home & Kitchen,Amman,4,156.31
+89,2024-10-15,Books,Irbid,5,215.49
+90,2024-07-08,Electronics,Irbid,4,1260.92
+91,2025-01-07,Electronics,Zarqa,3,2634.3
+92,2024-02-05,Home & Kitchen,Zarqa,2,154.18
+93,2024-12-09,Clothing,Aqaba,1,35.1
+94,2024-07-24,Home & Kitchen,Irbid,5,794.25
+95,2024-09-27,Electronics,Amman,1,215.09
+96,2024-01-24,Electronics,Zarqa,4,1373.58
+97,2024-06-07,Clothing,Aqaba,1,157.58
+98,2024-10-17,Books,Irbid,2,14.82
+99,2024-05-22,Books,Amman,5,252.26
+100,2024-02-01,Clothing,Amman,1,43.96
+101,2025-01-20,Home & Kitchen,Aqaba,1,174.18
+102,2024-09-07,Electronics,Aqaba,5,1555.17
+103,2025-05-30,Books,Amman,1,41.26
+104,2024-09-15,Electronics,Amman,4,3107.63
+105,2024-08-24,Clothing,Aqaba,2,217.82
+106,2025-05-05,Books,Zarqa,1,47.18
+107,2024-05-30,Clothing,Zarqa,1,65.71
+108,2024-05-16,Home & Kitchen,Amman,5,762.45
+109,2024-04-11,Books,Irbid,3,126.49
+110,2024-10-19,Home & Kitchen,Aqaba,5,738.9
+111,2024-07-23,Electronics,Zarqa,5,4412.5
+112,2024-10-23,Books,Aqaba,1,9.21
+113,2025-01-31,Books,Irbid,3,166.23
+114,2024-04-02,Clothing,Irbid,1,154.55
+115,2024-05-15,Home & Kitchen,Zarqa,3,803.27
+116,2025-05-24,Home & Kitchen,Aqaba,2,254.63
+117,2025-05-18,Clothing,Aqaba,1,92.98
+118,2024-12-18,Clothing,Aqaba,4,307.58
+119,2024-11-28,Home & Kitchen,Zarqa,1,254.15
+120,2024-01-13,Electronics,Zarqa,2,605.14
+121,2025-02-03,Electronics,Amman,4,1554.27
+122,2024-02-19,Books,Zarqa,3,31.78
+123,2024-09-12,Home & Kitchen,Zarqa,2,278.66
+124,2025-01-17,Home & Kitchen,Aqaba,2,534.03
+125,2024-07-27,Books,Amman,5,38.61
+126,2024-05-21,Books,Zarqa,4,126.83
+127,2025-04-28,Clothing,Aqaba,2,163.72
+128,2024-09-23,Home & Kitchen,Aqaba,3,605.88
+129,2025-02-07,Home & Kitchen,Amman,4,250.76
+130,2024-07-31,Clothing,Aqaba,1,119.07
+131,2025-04-05,Books,Aqaba,3,38.03
+132,2024-04-02,Clothing,Irbid,2,163.1
+133,2024-09-01,Electronics,Zarqa,3,920.06
+134,2025-02-26,Clothing,Aqaba,1,94.5
+135,2024-10-03,Clothing,Zarqa,4,621.52
+136,2025-01-03,Books,Irbid,3,128.31
+137,2024-10-04,Clothing,Irbid,1,89.22
+138,2024-11-15,Books,Amman,4,47.99
+139,2025-05-16,Books,Amman,4,36.09
+140,2024-09-11,Books,Amman,4,69.24
+141,2024-04-21,Clothing,Aqaba,5,176.5
+142,2024-05-08,Electronics,Irbid,1,555.51
+143,2024-05-11,Electronics,Zarqa,3,1567.81
+144,2024-04-11,Books,Amman,1,21.52
+145,2024-09-24,Clothing,Irbid,4,649.15
+146,2024-11-04,Electronics,Aqaba,1,322.88
+147,2025-05-01,Home & Kitchen,Irbid,2,341.79
+148,2024-11-10,Electronics,Amman,4,469.72
+149,2024-03-24,Books,Zarqa,4,70.12
+150,2024-08-20,Books,Aqaba,3,20.63
+151,2025-01-06,Home & Kitchen,Aqaba,4,285.81
+152,2024-03-10,Home & Kitchen,Irbid,5,781.37
+153,2024-07-17,Clothing,Irbid,3,311.16
+154,2024-04-21,Home & Kitchen,Aqaba,3,566.63
+155,2025-03-03,Clothing,Amman,4,763.11
+156,2024-02-25,Clothing,Irbid,4,97.01
+157,2024-02-23,Clothing,Amman,4,212.56
+158,2024-04-25,Books,Amman,3,168.71
+159,2024-07-08,Home & Kitchen,Aqaba,2,48.18
+160,2024-12-05,Books,Aqaba,3,42.93
+161,2024-10-13,Electronics,Amman,1,381.17
+162,2024-07-31,Electronics,Aqaba,5,1926.52
+163,2024-03-30,Home & Kitchen,Amman,4,863.99
+164,2025-04-02,Clothing,Irbid,3,234.59
+165,2025-02-24,Books,Irbid,1,49.65
+166,2025-01-19,Books,Amman,1,30.52
+167,2024-07-18,Electronics,Amman,3,2456.52
+168,2024-10-05,Home & Kitchen,Zarqa,3,863.82
+169,2024-11-20,Electronics,Zarqa,3,1013.77
+170,2024-08-27,Electronics,Amman,1,480.15
+171,2024-09-14,Books,Aqaba,4,199.26
+172,2024-07-06,Clothing,Amman,4,657.85
+173,2024-08-29,Home & Kitchen,Zarqa,2,520.91
+174,2024-03-21,Books,Irbid,3,79.63
+175,2025-02-21,Clothing,Amman,2,273.84
+176,2024-11-29,Books,Irbid,5,294.57
+177,2024-09-28,Electronics,Amman,1,266.67
+178,2025-04-02,Books,Irbid,4,71.52
+179,2024-08-28,Books,Amman,4,191.55
+180,2024-10-13,Home & Kitchen,Zarqa,3,363.89
+181,2025-03-25,Home & Kitchen,Irbid,2,135.87
+182,2024-10-15,Clothing,Irbid,2,157.48
+183,2024-09-08,Books,Irbid,3,122.19
+184,2024-02-07,Electronics,Amman,4,414.37
+185,2025-01-17,Clothing,Amman,4,711.36
+186,2024-02-21,Clothing,Irbid,1,128.09
+187,2025-01-16,Clothing,Irbid,1,100.84
+188,2024-04-18,Home & Kitchen,Zarqa,1,77.03
+189,2024-05-24,Home & Kitchen,Amman,3,219.4
+190,2024-07-27,Home & Kitchen,Amman,1,248.37
+191,2024-07-08,Books,Zarqa,3,27.86
+192,2025-05-10,Electronics,Amman,4,1706.14
+193,2024-06-07,Books,Amman,5,204.59
+194,2025-02-23,Books,Zarqa,3,125.19
+195,2024-11-15,Books,Zarqa,1,27.77
+196,2024-07-20,Electronics,Aqaba,3,2047.28
+197,2025-03-20,Clothing,Irbid,1,96.28
+198,2025-01-08,Electronics,Aqaba,4,2873.77
+199,2024-02-22,Clothing,Irbid,1,135.32
+200,2025-01-14,Books,Irbid,1,13.02
+201,2025-06-17,Home & Kitchen,Irbid,2,557.53
+202,2025-05-17,Electronics,Irbid,4,1365.17
+203,2024-11-18,Electronics,Amman,4,2344.46
+204,2024-06-13,Books,Irbid,1,39.16
+205,2024-07-06,Clothing,Irbid,4,110.03
+206,2025-01-02,Clothing,Amman,4,187.62
+207,2024-02-09,Clothing,Zarqa,1,41.19
+208,2024-11-09,Books,Aqaba,5,109.76
+209,2025-02-02,Clothing,Zarqa,4,401.69
+210,2024-01-24,Books,Amman,2,78.08
+211,2024-08-28,Books,Aqaba,4,187.98
+212,2025-04-29,Books,Aqaba,2,21.78
+213,2025-03-16,Clothing,Zarqa,3,109.53
+214,2025-06-06,Books,Amman,5,36.18
+215,2024-11-17,Clothing,Amman,1,29.77
+216,2024-01-27,Books,Amman,2,119.57
+217,2024-05-14,Electronics,Aqaba,2,660.61
+218,2024-03-08,Clothing,Zarqa,2,259.76
+219,2024-11-27,Home & Kitchen,Zarqa,2,545.89
+220,2024-09-17,Books,Aqaba,2,32.92
+221,2025-06-02,Home & Kitchen,Irbid,5,529.69
+222,2024-07-05,Electronics,Aqaba,2,457.97
+223,2025-01-20,Home & Kitchen,Irbid,3,722.27
+224,2024-02-19,Home & Kitchen,Zarqa,1,290.35
+225,2025-06-17,Books,Amman,5,94.31
+226,2024-09-28,Books,Aqaba,3,178.43
+227,2024-12-04,Clothing,Amman,3,298.83
+228,2024-02-19,Clothing,Zarqa,5,837.84
+229,2024-11-16,Home & Kitchen,Amman,3,683.79
+230,2024-10-24,Clothing,Aqaba,2,190.37
+231,2024-05-15,Home & Kitchen,Aqaba,1,79.77
+232,2024-02-25,Electronics,Amman,1,553.7
+233,2025-06-19,Home & Kitchen,Zarqa,1,167.22
+234,2024-11-04,Books,Irbid,5,81.15
+235,2024-05-17,Books,Amman,2,113.03
+236,2025-04-06,Clothing,Amman,2,62.92
+237,2025-02-15,Clothing,Zarqa,3,582.25
+238,2024-12-24,Electronics,Aqaba,5,2907.53
+239,2024-06-18,Books,Amman,2,14.84
+240,2024-07-09,Electronics,Irbid,4,909.49
+241,2024-07-20,Electronics,Irbid,1,430.54
+242,2024-06-27,Books,Zarqa,5,42.54
+243,2024-01-07,Electronics,Aqaba,4,3102.18
+244,2025-04-08,Books,Irbid,1,17.43
+245,2024-08-25,Electronics,Amman,3,595.84
+246,2024-09-29,Home & Kitchen,Aqaba,1,210.43
+247,2024-08-10,Home & Kitchen,Amman,3,797.44
+248,2024-09-23,Electronics,Irbid,2,1546.76
+249,2024-11-30,Clothing,Irbid,2,356.86
+250,2024-09-01,Home & Kitchen,Aqaba,5,1368.28
+251,2024-01-07,Books,Amman,4,116.19
+252,2024-11-11,Clothing,Irbid,5,452.41
+253,2024-06-24,Electronics,Irbid,5,631.65
+254,2024-06-14,Electronics,Zarqa,1,881.93
+255,2024-02-12,Electronics,Irbid,1,654.1
+256,2024-02-17,Electronics,Amman,1,785.2
+257,2024-03-08,Home & Kitchen,Aqaba,2,91.06
+258,2024-04-24,Clothing,Amman,2,52.39
+259,2025-05-03,Electronics,Amman,3,618.37
+260,2024-11-22,Clothing,Zarqa,3,288.83
+261,2024-09-19,Electronics,Zarqa,3,416.18
+262,2025-05-30,Home & Kitchen,Aqaba,3,772.93
+263,2024-02-01,Electronics,Aqaba,4,2059.59
+264,2025-04-25,Electronics,Amman,3,1590.91
+265,2024-10-21,Clothing,Irbid,1,98.49
+266,2024-02-25,Clothing,Amman,3,247.81
+267,2024-07-07,Electronics,Aqaba,4,2296.18
+268,2024-06-11,Home & Kitchen,Zarqa,5,1236.72
+269,2024-06-18,Clothing,Amman,4,755.87
+270,2024-04-17,Electronics,Zarqa,4,1537.97
+271,2024-03-29,Books,Aqaba,4,215.46
+272,2024-07-30,Electronics,Zarqa,3,931.67
+273,2024-08-27,Clothing,Aqaba,4,171.35
+274,2024-11-30,Electronics,Irbid,3,2383.2
+275,2024-11-27,Books,Irbid,5,152.37
+276,2024-08-24,Home & Kitchen,Irbid,5,551.03
+277,2024-07-15,Clothing,Zarqa,5,371.36
+278,2024-09-10,Clothing,Zarqa,2,257.04
+279,2024-08-29,Home & Kitchen,Zarqa,2,574.8
+280,2024-06-17,Home & Kitchen,Amman,1,70.7
+281,2024-11-05,Clothing,Zarqa,2,196.57
+282,2024-04-19,Clothing,Zarqa,1,57.16
+283,2024-02-04,Books,Amman,4,107.78
+284,2025-05-27,Books,Zarqa,2,60.96
+285,2025-02-18,Clothing,Amman,3,460.11
+286,2025-03-07,Books,Irbid,5,208.67
+287,2024-05-07,Clothing,Aqaba,2,195.71
+288,2025-03-05,Home & Kitchen,Irbid,1,237.98
+289,2025-03-09,Clothing,Aqaba,3,305.81
+290,2024-07-06,Books,Zarqa,5,239.0
+291,2024-04-18,Books,Amman,4,75.27
+292,2024-07-23,Clothing,Zarqa,2,76.39
+293,2024-07-28,Books,Aqaba,5,165.85
+294,2024-12-17,Home & Kitchen,Aqaba,5,1132.51
+295,2024-07-07,Books,Aqaba,2,66.52
+296,2024-12-30,Electronics,Amman,5,1509.83
+297,2024-03-03,Books,Amman,4,36.54
+298,2024-09-28,Books,Amman,3,52.03
+299,2024-08-12,Books,Aqaba,5,152.08
+300,2024-03-11,Clothing,Irbid,2,208.9
+301,2024-12-27,Clothing,Aqaba,2,208.52
+302,2024-05-08,Home & Kitchen,Aqaba,5,580.51
+303,2025-01-20,Clothing,Zarqa,3,590.76
+304,2024-01-03,Clothing,Zarqa,4,337.74
+305,2025-05-06,Home & Kitchen,Aqaba,3,411.36
+306,2024-06-05,Electronics,Zarqa,3,2350.67
+307,2024-11-28,Electronics,Irbid,1,524.52
+308,2024-01-16,Home & Kitchen,Amman,5,373.89
+309,2024-09-13,Electronics,Amman,3,1688.37
+310,2025-04-07,Clothing,Zarqa,2,322.56
+311,2024-06-20,Clothing,Amman,4,561.29
+312,2025-05-21,Home & Kitchen,Irbid,2,332.55
+313,2024-05-01,Books,Zarqa,1,28.05
+314,2025-05-19,Clothing,Amman,4,428.75
+315,2024-09-09,Clothing,Aqaba,4,198.52
+316,2024-11-24,Electronics,Aqaba,2,1313.42
+317,2025-04-21,Books,Zarqa,3,85.26
+318,2025-01-04,Electronics,Amman,2,232.9
+319,2024-04-06,Electronics,Aqaba,3,1463.22
+320,2024-08-06,Clothing,Aqaba,1,132.55
+321,2025-01-09,Home & Kitchen,Zarqa,1,150.24
+322,2025-03-21,Clothing,Zarqa,3,288.09
+323,2024-10-26,Electronics,Zarqa,3,2286.56
+324,2025-05-30,Books,Zarqa,3,159.04
+325,2025-05-19,Home & Kitchen,Amman,2,218.61
+326,2024-05-10,Home & Kitchen,Amman,3,715.5
+327,2025-02-19,Electronics,Amman,4,1675.14
+328,2024-02-17,Electronics,Irbid,1,757.57
+329,2024-03-02,Books,Aqaba,5,194.59
+330,2024-02-10,Electronics,Aqaba,2,1200.44
+331,2024-07-04,Clothing,Amman,1,95.88
+332,2025-01-12,Electronics,Irbid,1,729.23
+333,2024-07-08,Home & Kitchen,Aqaba,3,74.28
+334,2024-02-25,Electronics,Aqaba,4,2216.02
+335,2025-03-07,Electronics,Aqaba,1,457.18
+336,2024-06-08,Electronics,Aqaba,4,2863.64
+337,2025-04-28,Electronics,Irbid,1,816.62
+338,2024-01-05,Electronics,Amman,4,2588.04
+339,2024-08-11,Electronics,Amman,1,203.17
+340,2024-09-05,Electronics,Aqaba,3,2060.54
+341,2025-01-09,Clothing,Irbid,1,151.35
+342,2025-05-25,Electronics,Aqaba,3,1906.9
+343,2024-02-02,Home & Kitchen,Amman,1,32.26
+344,2024-11-14,Electronics,Zarqa,4,2734.21
+345,2024-03-02,Clothing,Zarqa,4,344.65
+346,2024-06-19,Books,Irbid,4,232.6
+347,2024-06-16,Electronics,Aqaba,3,1444.71
+348,2024-12-07,Books,Zarqa,3,61.18
+349,2024-01-16,Home & Kitchen,Irbid,5,931.62
+350,2025-03-14,Home & Kitchen,Irbid,5,611.76
+351,2024-08-27,Books,Aqaba,5,102.91
+352,2024-09-26,Electronics,Zarqa,3,1314.0
+353,2024-05-24,Electronics,Irbid,3,957.24
+354,2024-03-28,Books,Aqaba,3,146.57
+355,2024-11-12,Clothing,Amman,2,283.96
+356,2024-09-17,Books,Amman,2,97.08
+357,2024-03-30,Books,Zarqa,5,237.35
+358,2025-06-17,Clothing,Zarqa,4,717.27
+359,2025-06-02,Home & Kitchen,Irbid,4,275.63
+360,2024-07-04,Clothing,Zarqa,1,85.31
+361,2025-06-13,Home & Kitchen,Irbid,4,340.79
+362,2024-04-18,Books,Zarqa,3,119.4
+363,2024-11-19,Electronics,Amman,2,751.87
+364,2024-02-04,Electronics,Irbid,1,892.32
+365,2024-08-06,Books,Zarqa,5,279.51
+366,2024-04-09,Home & Kitchen,Aqaba,4,934.66
+367,2024-02-08,Clothing,Zarqa,3,168.53
+368,2024-03-26,Clothing,Amman,4,116.72
+369,2025-05-13,Home & Kitchen,Amman,4,1043.79
+370,2024-04-02,Books,Zarqa,1,22.53
+371,2025-06-02,Clothing,Aqaba,1,52.88
+372,2024-08-28,Clothing,Irbid,3,152.95
+373,2024-03-01,Home & Kitchen,Amman,3,760.82
+374,2025-06-09,Electronics,Aqaba,3,433.84
+375,2024-01-06,Clothing,Irbid,3,425.52
+376,2025-03-27,Home & Kitchen,Amman,5,745.78
+377,2025-02-03,Home & Kitchen,Amman,3,365.61
+378,2025-03-27,Books,Irbid,2,98.83
+379,2024-07-18,Electronics,Amman,4,902.26
+380,2025-01-17,Clothing,Irbid,1,160.1
+381,2024-01-23,Electronics,Amman,4,1847.47
+382,2024-08-27,Home & Kitchen,Aqaba,3,143.85
+383,2024-12-05,Home & Kitchen,Irbid,2,449.56
+384,2024-05-28,Clothing,Aqaba,4,706.92
+385,2025-02-25,Home & Kitchen,Irbid,4,237.48
+386,2024-10-30,Home & Kitchen,Zarqa,5,1220.91
+387,2024-04-21,Home & Kitchen,Zarqa,4,580.05
+388,2024-06-06,Books,Amman,1,39.71
+389,2025-05-03,Clothing,Zarqa,5,207.27
+390,2025-03-18,Clothing,Zarqa,3,598.97
+391,2025-02-03,Clothing,Zarqa,1,94.81
+392,2024-10-27,Clothing,Irbid,1,196.15
+393,2025-06-03,Electronics,Zarqa,4,2034.51
+394,2025-06-23,Books,Zarqa,1,15.22
+395,2025-02-22,Books,Irbid,1,20.23
+396,2024-07-03,Clothing,Irbid,2,296.18
+397,2024-03-22,Clothing,Amman,5,900.39
+398,2024-06-28,Books,Irbid,3,37.61
+399,2024-11-11,Clothing,Irbid,5,109.03
+400,2025-06-14,Books,Zarqa,1,23.44
